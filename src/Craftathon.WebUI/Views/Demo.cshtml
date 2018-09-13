@@ -1,0 +1,78 @@
+﻿@model Craftathon.Models.ViewModels.EmailViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<h1 class="display-4">Demo</h1>
+
+<p class="lead">Delegating the responsibilities of sending an email to customers using Azure Functions</p>
+
+<hr />
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h4>Demo: Send email using SMTP</h4>
+        <span>This is using a dummy SMTP server from mailtrap.io, which will not actually send the email, but it will be captured in your mailtrap.io account</span>
+
+        <form class="demo-form" asp-controller="Demo" asp-action="SendEmailUsingSmtp" method="POST">
+            <div class="form-group row">
+                <label asp-for="EmailAddress" class="col-2 col-form-label">Email</label>
+                <div class="col-md-4 col-sm-5">
+                    <input asp-for="EmailAddress" type="text" class="form-control">
+                    <span asp-validation-for="EmailAddress" class="text-muted"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Subject" class="col-2 col-form-label">Subject</label>
+                <div class="col-md-4 col-sm-5">
+                    <input asp-for="Subject" type="text" class="form-control">
+                    <span asp-validation-for="Subject" class="text-muted"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Message" class="col-2 col-form-label">Message</label>
+                <div class="col-md-4 col-sm-5">
+                    <textarea asp-for="Message" type="text" class="form-control"></textarea>
+                    <span asp-validation-for="Message" class="text-muted"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success">Send</button>
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h4>Demo: Send email using Sendgrid API</h4>
+
+        <form class="demo-form" asp-controller="Demo" asp-action="SendEmailUsingSendgrid" method="POST">
+            <div class="form-group row">
+                <label asp-for="EmailAddress" class="col-2 col-form-label">Email</label>
+                <div class="col-md-4 col-sm-5">
+                    <input asp-for="EmailAddress" type="text" class="form-control">
+                    <span asp-validation-for="EmailAddress" class="text-muted"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Subject" class="col-2 col-form-label">Subject</label>
+                <div class="col-md-4 col-sm-5">
+                    <input asp-for="Subject" type="text" class="form-control">
+                    <span asp-validation-for="Subject" class="text-muted"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Message" class="col-2 col-form-label">Message</label>
+                <div class="col-md-4 col-sm-5">
+                    <textarea asp-for="Message" type="text" class="form-control"></textarea>
+                    <span asp-validation-for="Message" class="text-muted"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success">Send</button>
+        </form>
+    </div>
+</div>

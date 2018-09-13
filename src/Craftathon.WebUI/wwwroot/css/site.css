@@ -1,0 +1,37 @@
+﻿.bg-purple {
+    background-color: #752864;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.demo-form {
+    padding-top: 20px;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    margin-right: 3rem;
+}
+
+.container {
+    position: relative;
+    top: 100px;
+    padding-bottom: 50px;
+}
+
+.google-maps {
+    height: 500px;
+    width: 100%;
+}
+
+.display-4 {
+    position: relative;
+    margin-left: -3px;
+}
+
+.alert span {
+    margin-left: 10px;
+}

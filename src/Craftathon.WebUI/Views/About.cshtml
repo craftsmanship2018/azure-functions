@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewData["Title"] = "About";
+    Layout = "_Layout";
+}
+
+<h1 class="display-4">Computershare</h1>
+<p class="lead">One of Melbourne's first start up technology companies, founded in 1978.</p>
+<hr />
+
+<p>
+    A global leader in finance and technology. We’re an Aussie company that values openness, directness,
+    hard work and quick decision making.
+</p>
+
+<p>
+    Our Global Technology Centre is bringing more than 300 high quality technology jobs into Edinburgh and we’re offering apprentices, graduates and technology
+    professionals the potential for a career where they can interact with colleagues across the world.
+</p>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h5>Opportunities</h5>
+        <p>For all our latest opportunities, please visit <a target="_blank" href="https://stackoverflow.com/jobs/companies/computershare">Stackoverflow</a> or speak to one of the Computershare representatives.</p>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-12">
+        <h5>Locations</h5>
+
+        <p>
+            Our Global Development team is currently based in the Regus building on St Andrew Square. In Q1 2019, we will all be moving into our brand new Global
+            Technology office on North St Andrew Street, fully equipped with a gym, juice bar, rooftop terrace and all round amazing work space.
+        </p>
+
+        <div class="row mt-4">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="d-block">The Pavilions</span>
+                        <span class="d-block">Bridgwater Rd</span>
+                        <span class="d-block">Bristol</span>
+                        <span class="d-block">BS99 6ZZ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="d-block">Regus (temp office)</span>
+                        <span class="d-block">9-10 St Andrew Square</span>
+                        <span class="d-block">Edinburgh</span>
+                        <span class="d-block">EH2 2AF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div id="google-maps-container" class="google-maps"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+
+    <script>
+        function showGoogleMaps() {
+            var tempOfficePosition = createMapPosition(55.9536, -3.1942);
+            var newOfficePosition = createMapPosition(55.955457, -3.192395);
+            var stAndrewSquarePosition = createMapPosition(55.954210, -3.193150);
+
+            var options = {
+                center: stAndrewSquarePosition,
+                zoom: 16,
+                mapTypeControl: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                fullscreenControl: true,
+                scaleControl: false,
+                draggable: true,
+                streetViewControl: true
+            };
+
+            var mapContainer = document.getElementById("google-maps-container");
+            var map = createMap(mapContainer, options);
+
+            addMapMarker(map, tempOfficePosition, "Temp Office");
+            addMapMarker(map, newOfficePosition, "New Office");
+        }
+
+        function createMap(el, options) {
+            return new google.maps.Map(el, options);
+        }
+
+        function createMapPosition(latitude, longitude) {
+            return new google.maps.LatLng(latitude, longitude);
+        }
+
+        function addMapMarker(map, position, title) {
+            new google.maps.Marker({
+                map: map,
+                position: position,
+                title: title
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+    </script>
+}

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftathon.WebUI", "Craftathon.WebUI\Craftathon.WebUI.csproj", "{18DAAF66-E970-4430-8986-489D8B77A8F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftathon.Services", "Craftathon.Services\Craftathon.Services.csproj", "{7A1BB07A-AE3B-4AAD-80FF-A18D25BF6E72}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftathon.Models", "Craftathon.Models\Craftathon.Models.csproj", "{353E153C-CE7D-490A-8EB8-360E150E6EF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftathon.AzureFunctions", "Craftathon.AzureFunctions\Craftathon.AzureFunctions.csproj", "{8599578F-F4B9-49D8-A4C3-28B4FF24E8BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38A4C04E-B5F9-49C9-9859-4E26FFC01781}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18DAAF66-E970-4430-8986-489D8B77A8F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DAAF66-E970-4430-8986-489D8B77A8F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DAAF66-E970-4430-8986-489D8B77A8F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DAAF66-E970-4430-8986-489D8B77A8F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A1BB07A-AE3B-4AAD-80FF-A18D25BF6E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1BB07A-AE3B-4AAD-80FF-A18D25BF6E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1BB07A-AE3B-4AAD-80FF-A18D25BF6E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1BB07A-AE3B-4AAD-80FF-A18D25BF6E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353E153C-CE7D-490A-8EB8-360E150E6EF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353E153C-CE7D-490A-8EB8-360E150E6EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353E153C-CE7D-490A-8EB8-360E150E6EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353E153C-CE7D-490A-8EB8-360E150E6EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8599578F-F4B9-49D8-A4C3-28B4FF24E8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8599578F-F4B9-49D8-A4C3-28B4FF24E8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8599578F-F4B9-49D8-A4C3-28B4FF24E8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8599578F-F4B9-49D8-A4C3-28B4FF24E8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9FB7F1C-6D29-42FC-BC79-BFA755F85ACB}
+	EndGlobalSection
+EndGlobal

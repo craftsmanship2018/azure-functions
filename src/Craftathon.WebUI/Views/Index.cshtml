@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "_Layout";
+
+    var resources = new Dictionary<string, string>
+    {
+        { "Develop Azure Functions using Visual Studio", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs" },
+        { "C# Dev Reference", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp" },
+        { "Azure Functions Overview", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview" },
+        { "Sendgrid API", "https://sendgrid.com/docs/API_Reference/api_v3.html" }
+    };
+
+    var examples = new Dictionary<string, string>
+    {
+        { "Create a function triggered by Azure Blob storage", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-blob-triggered-function" },
+        { "Create a function triggered by a timer", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-scheduled-function" },
+        { "Create a function triggered by a generic webhook", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-generic-webhook-triggered-function" },
+        { "Create a function triggered by a GitHub webhook", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-github-webhook-triggered-function" },
+        { "Create a function triggered by Azure Queue storage", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-queue-triggered-function" }
+    };
+}
+
+<div class="jumbotron">
+    <h1 class="display-4">Azure Functions</h1>
+    <p class="lead">Write serverless code to handle events at scale without worrying about managing infrastructure</p>
+    <hr class="my-4">
+    <a class="btn btn-warning btn-lg" href="/demo" role="button">Demo</a>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="alert alert-success" role="alert">
+            <div class="vertical-align">
+                <i class="fab fa-meetup fa-2x"></i>
+                <span>Join <a target="_blank" href="https://www.meetup.com/DotNETEdinburgh/" class="alert-link">.NET Edinburgh Meet Up</a>. A group for local tech enthusiasts to connect and collaborate around the .NET ecosystem.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-sm-6 col-md-6">
+        <div class="card">
+            <div class="card-header">Resources</div>
+            <ul class="list-group list-group-flush">
+                @foreach (var res in resources)
+                {
+                    <li class="list-group-item">
+                        <a target="_blank" href="@res.Value" class="card-link">@res.Key</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6">
+        <div class="card">
+            <div class="card-header">Examples</div>
+            <ul class="list-group list-group-flush">
+                @foreach (var ex in examples)
+                {
+                    <li class="list-group-item">
+                        <a target="_blank" href="@ex.Value" class="card-link">@ex.Key</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
