@@ -7,7 +7,7 @@ namespace Craftathon.Services.EmailSenders
 {
     public class SendgridEmailSender : IEmailSender
     {
-        private const string API_KEY = "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";
+        private const string API_KEY = "";
 
         public void Send(SendEmailRequestDto dto)
         {
