@@ -16,29 +16,17 @@ Azure Functions is a serverless compute service that enables you to run code on-
 
 ### What's my goal?
 
-Your goal is to decompose the web application into Azure Function microservices.
+Your initial goal is to follow the HTTP Trigger demo documented within the web app. This will guide you through setting up a basic Azure Function.
 
-Imagine a startup company has a basic e-commerce website allowing customers to purchase products from its store, and make payments through a third party provider.
+After that, you can choose to extend that functionality, or look to creating a continuous integration and deployment pipeline using Azure DevOps, again, this is documented within the web app.
 
-As the business has grown through the years, there needs to be a scalable solution, so it doesn't become monolithic.
-
-The new requirements of the system now includes:
+Some ideas for extending the Azure Function:
 - Sending email confirmations to users who use the contact us form
 - Generating and sending order confirmations to customers via email
 - Generating and sending software licence files to customers via email
 - Scheduled reporting e.g. daily/weekly sales
 
 ### Solution Components
-
-Craftathon.AzureFunctions
-- Contains the Azure Functions that can be developed in Visual Studio and also published from Visual Studio.
-
-1) AddOrderToQueueWebhook - This Function responds to an HTTP request to add an order to a queue to be processed.
-
-2) AddOrderToBlobStorageQueueTrigger - This function responds to items added to queue. The order information is used to generate the licence
-  file and stored in blob storage.
-
-3) EmailLicenceBlobTrigger - This function responds to items added to blob storage. The licence file is retrieved from blob storage and emailed to the customer.
 
 Craftathon.Models
 - Contains data models
@@ -50,7 +38,6 @@ Craftathon.WebUI
 - Contains:
     - web interface which will be used to fire HTTP requests to Azure Functions.
     - resources and examples on various Azure Functions topics.
-    - code to be able to send emails via SMTP and Sendgrid API.
 
 ### Running Craftathon.WebUI
 
