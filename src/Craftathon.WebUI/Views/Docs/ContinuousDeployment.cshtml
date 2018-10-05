@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Continuous Deployment";
+    Layout = "_Layout";
+}
+
+<h1 class="display-4">Continuous Deployment in Azure DevOps</h1>
+<p class="lead">Deploying changes to your customers as soon as the production pipeline passes</p>
+<hr />
+
+<p>1. In the left panel, navigate to <strong>Pipelines</strong> then <strong>Builds</strong>. If this is your first build pipeline, you will see the image below. Click <strong>New Pipeline</strong>.</p>
+
+<img class="img-fluid ml-5" alt="Create pipeline" src="~/images/continuous-deployment/new-pipeline.png" />
+
+<p class="mt-4">2. As we are working with Azure Functions, we need to look for the relevant <strong>deploy template</strong>. Using the search box, find <strong>Deploy a function app to Azure Functions</strong>. Select the template and apply.</p>
+
+<img class="img-fluid ml-5" alt="Select pipeline template" src="~/images/continuous-deployment/select-template.png" />
+
+<p class="mt-4">3. Add a stage name and owner, default values are sufficient. Click on the X to close.</p>
+
+<img class="img-fluid ml-5" alt="Add deploy stage" src="~/images/continuous-deployment/add-stage.png" />
+
+<p class="mt-4">4. Modify Artifacts, click on <strong>Add an artifact</strong></p>
+
+<img class="img-fluid ml-5" alt="Add artifact" src="~/images/continuous-deployment/click-add-artifact.png" />
+
+<p class="mt-4">5. Fill in the required fields then click <strong>Add</strong></p>
+
+<img class="img-fluid ml-5" alt="Fill in fields" src="~/images/continuous-deployment/add-an-artifact.png" />
+
+<p class="mt-4">6. Modify Stage 1, click on <strong>1 job, 1 task</strong></p>
+
+<img class="img-fluid ml-5" alt="Modify stage" src="~/images/continuous-deployment/modify-stage.png" />
+
+<p class="mt-4">7. Assign an Azure Subscription and <strong>Authorize</strong>. Then, select an <strong>App Service Name</strong>, which comes from your Azure Portal. Finally, click <strong>Save</strong></p>
+
+<img class="img-fluid ml-5" alt="Add stage details" src="~/images/continuous-deployment/add-stage-details.png" />
+
+<p class="mt-4">8. The save dialog is fine to be left with default values. Click <strong>OK</strong></p>
+
+<img class="img-fluid ml-5" alt="Save pipeline" src="~/images/continuous-deployment/save.png" />
+
+<p class="mt-4">9. Click on the deploy service</p>
+
+<img class="img-fluid ml-5" alt="Click deploy service" src="~/images/continuous-deployment/click-deploy-service.png" />
+
+<p class="mt-4">10. The service should be set to 3.*. It defaults to 4, which causes an endpoint authentication error. Finally, click <strong>Save</strong></p>
+
+<img class="img-fluid ml-5" alt="Modify deploy service settings" src="~/images/continuous-deployment/deploy-settings.png" />

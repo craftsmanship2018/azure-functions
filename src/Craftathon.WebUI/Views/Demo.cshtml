@@ -15,7 +15,7 @@
         <h4>Demo: Send email using SMTP</h4>
         <span>This is using a dummy SMTP server from mailtrap.io, which will not actually send the email, but it will be captured in your mailtrap.io account</span>
 
-        <form class="demo-form" asp-controller="Demo" asp-action="SendEmailUsingSmtp" method="POST">
+        <form class="mt-4" asp-controller="Demo" asp-action="SendEmailUsingSmtp" method="POST">
             <div class="form-group row">
                 <label asp-for="EmailAddress" class="col-2 col-form-label">Email</label>
                 <div class="col-md-4 col-sm-5">
@@ -49,7 +49,7 @@
     <div class="col-12">
         <h4>Demo: Send email using Sendgrid API</h4>
 
-        <form class="demo-form" asp-controller="Demo" asp-action="SendEmailUsingSendgrid" method="POST">
+        <form class="mt-4" asp-controller="Demo" asp-action="SendEmailUsingSendgrid" method="POST">
             <div class="form-group row">
                 <label asp-for="EmailAddress" class="col-2 col-form-label">Email</label>
                 <div class="col-md-4 col-sm-5">

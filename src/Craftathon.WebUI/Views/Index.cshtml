@@ -3,41 +3,41 @@
 
     var resources = new Dictionary<string, string>
     {
-        { "Develop Azure Functions using Visual Studio", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs" },
-        { "C# Dev Reference", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp" },
         { "Azure Functions Overview", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview" },
+        { "Azure Functions C# Dev Reference", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp" },
+        { "Develop Azure Functions using Visual Studio", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs" },
         { "Sendgrid API", "https://sendgrid.com/docs/API_Reference/api_v3.html" }
     };
 
     var examples = new Dictionary<string, string>
     {
         { "Create a function triggered by Azure Blob storage", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-blob-triggered-function" },
-        { "Create a function triggered by a timer", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-scheduled-function" },
+        { "Create a function triggered by Azure Queue storage", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-queue-triggered-function" },
         { "Create a function triggered by a generic webhook", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-generic-webhook-triggered-function" },
         { "Create a function triggered by a GitHub webhook", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-github-webhook-triggered-function" },
-        { "Create a function triggered by Azure Queue storage", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-queue-triggered-function" }
+        { "Create a function triggered by a timer", "https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-scheduled-function" }
     };
 }
 
-<div class="jumbotron">
+<div class="jumbotron mb-0">
     <h1 class="display-4">Azure Functions</h1>
     <p class="lead">Write serverless code to handle events at scale without worrying about managing infrastructure</p>
     <hr class="my-4">
-    <a class="btn btn-warning btn-lg" href="/demo" role="button">Demo</a>
+    <a class="btn btn-warning btn-lg" href="/example/http-trigger" role="button">Demo</a>
 </div>
 
 <div class="row mt-4">
     <div class="col-12">
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success mb-0" role="alert">
             <div class="vertical-align">
                 <i class="fab fa-meetup fa-2x"></i>
-                <span>Join <a target="_blank" href="https://www.meetup.com/DotNETEdinburgh/" class="alert-link">.NET Edinburgh Meet Up</a>. A group for local tech enthusiasts to connect and collaborate around the .NET ecosystem.</span>
+                <span class="ml-3">Join <a target="_blank" href="https://www.meetup.com/DotNETEdinburgh/" class="alert-link">.NET Edinburgh Meet Up</a>. A group for local tech enthusiasts to connect and collaborate around the .NET ecosystem.</span>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row mt-2">
+<div class="row mt-4">
     <div class="col-sm-6 col-md-6">
         <div class="card">
             <div class="card-header">Resources</div>

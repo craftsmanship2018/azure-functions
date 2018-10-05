@@ -7,16 +7,12 @@
     align-items: center;
 }
 
-.demo-form {
-    padding-top: 20px;
-}
-
-.navbar-brand {
+nav .navbar-brand {
     font-size: 2rem;
-    margin-right: 3rem;
+    margin-right: 4rem;
 }
 
-.container {
+main .container {
     position: relative;
     top: 100px;
     padding-bottom: 50px;
@@ -30,8 +26,4 @@
 .display-4 {
     position: relative;
     margin-left: -3px;
-}
-
-.alert span {
-    margin-left: 10px;
 }

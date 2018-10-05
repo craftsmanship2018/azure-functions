@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<h1 class="display-4">Continuous Integration in Azure DevOps</h1>
+<p class="lead">Automating builds and running unit tests when code changes are made</p>
+<hr />
+
+<p>1. In the left panel, navigate to <strong>Pipelines</strong> then <strong>Builds</strong>. If this is your first build pipeline, you will see the image below. Click <strong>New Pipeline</strong>.</p>
+
+<img class="img-fluid ml-5" alt="Create pipeline" src="~/images/continuous-integration/new-pipeline.png" />
+
+<p class="mt-4">2. Select the source of your code repository. This example uses Azure Repos.</p>
+
+<img class="img-fluid ml-5" alt="Select code source" src="~/images/continuous-integration/select-code-source.png" />
+
+<p class="mt-4">3. Select your code repository.</p>
+
+<img class="img-fluid ml-5" alt="Select code repository" src="~/images/continuous-integration/select-repo.png" />
+
+<p class="mt-4">4. Select the appropriate build template. This will depend on your Visual Studio project build configuration.</p>
+
+<img class="img-fluid ml-5" alt="Select build template" src="~/images/continuous-integration/select-build-template.png" />
+
+<p class="mt-4">5. Modify the auto-generated build script to include a publish artifact step. This will be the files that get deployed in the Release pipeline. For more information, click <a target="_blank" href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=vsts">here</a>.</p>
+
+<pre class="ml-4">
+task: PublishBuildArtifacts@1
+inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: ‘azure-functions-artifacts’
+</pre>

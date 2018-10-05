@@ -5,15 +5,29 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Compile Remove="wwwroot\images\pipeline-azure-repos\**" />
+    <Content Remove="wwwroot\images\pipeline-azure-repos\**" />
+    <EmbeddedResource Remove="wwwroot\images\pipeline-azure-repos\**" />
+    <None Remove="wwwroot\images\pipeline-azure-repos\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Craftathon.Services\Craftathon.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Docs\ContinuousDeployment.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\azure-portal\" />
   </ItemGroup>
 
 </Project>

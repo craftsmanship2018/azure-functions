@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<h1 class="display-4">Demo: HTTP Trigger</h1>
+<p class="lead">Trigger Azure Function with HTTP Request</p>
+<hr />
+
+<p>1. In the left panel, click on <strong>Create a resource</strong> then search for <strong>Function App</strong>.</p>
+
+<img class="img-fluid ml-5" alt="Create resource" src="~/images/azure-portal/search-function-app.png" />
+
+<p class="mt-4">2. Select <strong>Function App</strong> and click <strong>Create</strong></p>
+
+<img class="img-fluid ml-5" alt="Select Function App" src="~/images/azure-portal/select-function-app.png" />
+
+<p class="mt-4">3. Fill in the fields, and click <strong>Create</strong>. It will then start the deployment</p>
+
+<p class="mt-4">4. When the deployment is finished, you will get a notification like so. For quick access, pin it to the dashboard.</p>
+
+<img class="img-fluid ml-5" alt="Deployment notication" src="~/images/azure-portal/deploy-notification.png" />
+
+<p class="mt-4">5. Click on your newly created resource on your dashboard (if you pinned it), click <strong>+</strong>, choose <strong>In-portal</strong> and click <strong>Continue</strong>.</p>
+
+<img class="img-fluid ml-5" alt="Select in-portal" src="~/images/azure-portal/create-azure-function.png" />
+
+<p class="mt-4">6. Click on <strong>Webhook + API</strong> and click <strong>Create</strong>.</p>
+
+<img class="img-fluid ml-5" alt="Select webhook" src="~/images/azure-portal/select-webhook.png" />
+
+<p class="mt-4">7. Expand your resource and you should see the new Azure Function. If not, click the refresh symbol.</p>
+
+<img class="img-fluid ml-5" alt="Expand resource" src="~/images/azure-portal/refresh-resource.png" />
+
+<p class="mt-4">8. Click on your Azure Function and click <strong>Get function URL</strong> using the <strong>default</strong> key.</p>
+
+<img class="img-fluid ml-5" alt="Expand resource" src="~/images/azure-portal/get-url.png" />
+
+<p class="mt-4">9. Modify the Javascript code with your URL</p>
+
+<p class="mt-4">10. Use this form to submit data to your Azure Function</p>
+
+<form class="ml-5">
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Your Name</label>
+        <div class="col-md-4 col-sm-5">
+            <input type="text" name="name" class="form-control">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Send</button>
+</form>
+
+<p class="mt-4">11. Verify the response is successful and is as expected</p>
+
+<div class="ml-5">
+    <input id="response" class="form-control col-6" type="text" readonly>
+</div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("form").on("submit", function (event) {
+                event.preventDefault();
+
+                var url = "https://easy-demo-1.azurewebsites.net/api/HttpTriggerCSharp1?code=WiUSQUa5KXx/aqUgplNih8KE2WsznSX4l2eGMBXToCuAAxC7AAaO0A==";
+                var formData = $(this).serialize();
+                sendHttpRequestToAzureFunction(url, formData);
+            });
+        });
+
+        function sendHttpRequestToAzureFunction(url, formData) {
+            $.ajax({
+                type: "POST",
+                url: url,
+                dataType: "text",
+                data: formData,
+                ContentType: 'application/x-www-form-urlencoded',
+                success: (data) => {
+                    $("#response").val(data);
+                },
+                error: (data) => {
+                    $("#response").val(data.responseText);
+                }
+            });
+        }
+    </script>
+}

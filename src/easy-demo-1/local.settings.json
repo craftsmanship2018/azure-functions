@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "WEBSITE_SLOT_NAME": "Production",
+    "FUNCTIONS_EXTENSION_VERSION": "~2",
+    "ScmType": "None",
+    "WEBSITE_AUTH_ENABLED": "False",
+    "REMOTEDEBUGGINGVERSION": "11.0.611103.400",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "201c38c4-100b-4384-8493-2f49ad0d435c",
+    "WEBSITE_NODE_DEFAULT_VERSION": "8.11.1",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=azureportaldemo9172;AccountKey=12GvSIseVVxTBEOvTGR3UJgz2zD5p3ZYLlzwXVcq/kfne5ERZl66P21xp5exWvsS8D8WHlsy5mayv9hTfKTlyw==",
+    "WEBSITE_CONTENTSHARE": "easy-demo-1b396",
+    "WEBSITE_AUTH_AUTO_AAD": "False",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "WEBSITE_SITE_NAME": "easy-demo-1",
+    "WEBSITE_AUTH_LOGOUT_PATH": "/.auth/logout",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=azureportaldemo9172;AccountKey=12GvSIseVVxTBEOvTGR3UJgz2zD5p3ZYLlzwXVcq/kfne5ERZl66P21xp5exWvsS8D8WHlsy5mayv9hTfKTlyw=="
+  }
+}

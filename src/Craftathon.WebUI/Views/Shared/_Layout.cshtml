@@ -12,34 +12,44 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-purple fixed-top">
-        <span class="navbar-brand mb-0 h1">Craftathon</span>
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Craftathon</span>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div id="navbar-nav" class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/demo">Demo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">Computershare</a>
-                </li>
-            </ul>
+            <div id="navbar-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">Computershare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/example/http-trigger">HTTP Trigger Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/docs/continuous-integration">Continuous Integration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/docs/continuous-deployment">Continuous Deployment</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="container">
-        @RenderBody()
-    </div>
+    <main>
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
 
-    @RenderSection("scripts", false)
     <script src="~/lib/jquery-3.3.1.js"></script>
     <script src="~/lib/bootstrap-4.1.3-dist/js/bootstrap.js"></script>
+    @RenderSection("scripts", false)
 
     <script>
         $(document).ready(function () {
@@ -47,15 +57,13 @@
         });
 
         function SetNavBarActiveState() {
-            var current = location.pathname;
             var anchors = $('#navbar-nav li a');
 
             for (var i = 0; i < anchors.length; i++) {
                 var $anchor = $(anchors[i]);
                 var href = $anchor.attr('href');
 
-                // if the current path is like this link, make it active
-                if (href.indexOf(current) !== -1) {
+                if (href.indexOf(location.pathname) !== -1) {
                     $anchor.addClass('active');
                     return;
                 }
