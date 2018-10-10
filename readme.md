@@ -1,4 +1,4 @@
-# Azure Functions
+# Azure Functions (C#/JS)
 
 In a nutshell: Azure Functions = Events + Code
 
