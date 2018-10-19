@@ -1,27 +1,28 @@
-# Azure Functions (C#/JS)
+# Azure Web App
 
-In a nutshell: Azure Functions = Events + Code
+## Story
 
-Azure Functions is a serverless compute service that enables you to run code on-demand without having to explicitly provision or manage infrastructure.
-  - Rapid prototyping, write only the code to respond to the event
-  - No need to write boilerplate code
-  - No server maintainence
-  - Automatic scaling
+A startup e-commerce company has a website allowing customers to purchase products from its online store. As the business has increased over the years, the company want to track engagement metrics for marketing emails it sends to customers. They need a scalable solution, with a CI/CD pipeline to enhance customer engagement and increase sales.
 
-### Usage examples
+## Technology
 
-  - Run a scheduled task e.g. generating a daily/weekly report
-  - Process messages in a queue or items added to blob storage e.g. sending an order confirmation email to a customer when an order has be placed
-  - Respond to a HTTP request or webhook e.g. handle the callback from a third party payment provider
+The company wishes to continue using their .NET Core web application as is, but do not want implement their own solution to gather email engagement metrics, knowing there are effective existing solutions. They have chosen Azure Web Apps to host the application as it should port easily, while offering reduced maintenance and cost-effective scalability.
 
-### What's my goal?
+## Getting Started
 
-Your initial goal is to follow the HTTP Trigger demo documented within the web app. This will guide you through setting up a basic Azure Function.
+1. Clone or download this repository
+1. Open `src/Craftathon.sln` in Visual Studio
+1. Restore NuGet packages
+1. Build the solution and start a new instance of `Craftathon.WebUI`
 
-After that, you can choose to extend that functionality, or look to creating a continuous integration and deployment pipeline using Azure DevOps, again, this is documented within the web app.
+## Goal
 
-Some ideas for extending the Azure Function:
-- Sending email confirmations to users who use the contact us form
-- Generating and sending order confirmations to customers via email
-- Generating and sending software licence files to customers via email
-- Scheduled reporting e.g. daily/weekly sales
+1. Follow the HTTP Trigger demo documented within the web app. This will guide you through setting up a basic Azure Function.
+1. Modify the HTTP trigger function, you could...
+    - Send marketing emails to subscribed users
+    - Generate and send order confirmations to customers via email
+    - Generate and send software licence files to customers via email
+1. Build a continuous integration and deployment pipeline using Azure DevOps, that will build, test and deploy the application in a safe and repeatable way. The pipleline should...
+    - Be triggered by source control
+    - Execute all unit tests
+    - Publish the solution to a production environment
