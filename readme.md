@@ -19,7 +19,7 @@ The company wishes to continue using their .NET Core web application as is, but 
 
 1. Follow the HTTP Trigger demo documented within the web app. This will guide you through setting up a basic Azure Function.
 1. Modify the HTTP trigger function, you could...
-    - Send marketing emails to subscribed users
+    - Send emails to users (this would be the marketing emails, but keep it simple without worry about the email contents)
     - Generate and send order confirmations to customers via email
     - Generate and send software licence files to customers via email
 1. Build a continuous integration and deployment pipeline using Azure DevOps, that will build, test and deploy the application in a safe and repeatable way. The pipleline should...
