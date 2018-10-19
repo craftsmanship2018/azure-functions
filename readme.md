@@ -1,5 +1,4 @@
-# Azure Web App
-
+# Azure Functions
 ## Story
 
 A startup e-commerce company has a website allowing customers to purchase products from its online store. As the business has increased over the years, the company want to track engagement metrics for marketing emails it sends to customers, to improve customer engagement and increase sales. They need a scalable solution with a continuous integration and deployment pipeline.
